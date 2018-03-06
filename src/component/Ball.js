@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  RGB2Color from './Services.js';
+import { drawStar , RGB2Color, byte2Hex } from './Services.js';
 
 class Ball{
   constructor(args) {
@@ -34,12 +34,7 @@ class Ball{
     const context = state.context;
     context.save()
     // context.clearRect(0, 0, state.screen.width, state.screen.height);
-    context.beginPath();
-    context.arc(this.position.x += this.velocity.x , this.position.y += this.velocity.y , 40, 0, 2*Math.PI);
-    context.fillStyle = RGB2Color(red,green,blue);
-    context.fill();
-    context.stroke();
-    context.save();
+    drawStar(context, this.position.x += this.velocity.x, this.position.y += this.velocity.y, 5, 40, 20, RGB2Color(red,green,blue));
   }
 }
 
