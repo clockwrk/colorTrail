@@ -34,7 +34,7 @@ class Ball{
     const context = state.context;
     context.save()
     // context.clearRect(0, 0, state.screen.width, state.screen.height);
-    drawStar(context, this.position.x += this.velocity.x, this.position.y += this.velocity.y, 5, 40, 20, RGB2Color(red,green,blue));
+    drawStar(context, this.position.x += this.velocity.x, this.position.y += this.velocity.y, 5, 70, 30, RGB2Color(red,green,blue));
   }
 }
 
